@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fasilitas Perumahan Taman Kebayoran</title>
+    <meta
+      name="description"
+      content="Informasi mengenai fasilitas yang tersedia di Perumahan Taman Kebayoran. Disusun sebagai bagian dari output program KKN mahasiswa."
+    />
+    <link rel="icon" href="img/Logo KKN.png" type="image/png" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Tambahan/style.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/Logo KKN.png"
+            alt="Logo Perumahan Taman Kebayoran"
+            class="h-8 w-8 object-contain"
+          />
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-slate-900 tracking-wide text-sm"
+              >Taman Kebayoran</span
+            >
+            <span class="text-[10px] text-slate-500"
+              >Website KKN Mahasiswa</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a>
+          <a href="Program.html" class="hover:text-emerald-600">Program</a>
+
+          <!-- DROPDOWN: STRUKTUR -->
+          <div class="relative" id="menu-struktur-wrapper">
+            <button
+              id="menu-struktur-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Struktur</span>
+              <svg
+                id="menu-struktur-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list struktur -->
+            <div
+              id="menu-struktur-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="struktur.html#inti"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur Kelompok KKN
+              </a>
+              <a
+                href="#pengurus-rw"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur RW
+              </a>
+              <a
+                href="strukturrw.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800"
+              >
+                Struktur DKM Masjid
+              </a>
+            </div>
+          </div>
+          <!-- DROPDOWN: dokumentasi -->
+          <div class="relative" id="menu-dokumentasi-wrapper">
+            <button
+              id="menu-dokumentasi-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Dokumentasi</span>
+              <svg
+                id="menu-dokumentasi-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list dokumentasi -->
+            <div
+              id="menu-dokumentasi-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="dkkkn.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi KKN
+              </a>
+              <a
+                href="dwarga.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi Warga
+              </a>
+            </div>
+          </div>
+          <a href="kontak.html" class="hover:text-emerald-600">Kontak</a>
+        </div>
+
+        <!-- Mobile button -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none"
+        >
+          <span class="sr-only">Open main menu</span>
+          <div class="space-y-1">
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+          </div>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-100 bg-white"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1 text-sm">
+          <a href="index.html" class="block py-2 hover:text-emerald-600"
+            >Beranda</a
+          >
+          <a href="profil.html" class="block py-2 hover:text-emerald-600"
+            >Profil</a
+          >
+          <a href="struktur-kkn.html" class="block py-2 hover:text-emerald-600"
+            >Struktur KKN</a
+          >
+          <a href="kegiatan-kkn.html" class="block py-2 hover:text-emerald-600"
+            >Dokumentasi Kegiatan</a
+          >
+          <a href="kontak.html" class="block py-2 hover:text-emerald-600"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO / BREADCRUMB -->
+    <section class="bg-gradient-to-b from-emerald-50 to-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <p class="text-xs text-slate-500 mb-2">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a> /
+          <span class="text-slate-700">Fasilitas</span>
+        </p>
+        <h1 class="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
+          Fasilitas Perumahan Taman Kebayoran
+        </h1>
+        <p class="text-sm text-slate-600 max-w-2xl">
+          Halaman ini menyajikan informasi umum mengenai fasilitas yang terdapat
+          di Perumahan Taman Kebayoran. Data disusun berdasarkan hasil observasi
+          mahasiswa KKN dan dapat disesuaikan dengan informasi resmi dari
+          pengembang maupun pengurus lingkungan.
+        </p>
+      </div>
+    </section>
+    <!-- DAFTAR FASILITAS -->
+    <section class="py-6 pb-12">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-6"
+        id="fasilitas-grid"
+      >
+        <!-- Taman / Ruang Terbuka Hijau -->
+        <article
+          class="fasilitas-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col"
+          data-kategori="umum"
+        >
+          <img
+            src="img/Ruang.webp"
+            alt="Taman dan ruang terbuka hijau"
+            class="h-40 w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-2 flex-1 text-sm">
+            <h2 class="font-semibold text-slate-900 text-sm">
+              Taman & Ruang Terbuka Hijau
+            </h2>
+            <p class="text-slate-600 text-xs">
+              Area hijau yang digunakan warga untuk bersantai, berolahraga
+              ringan, dan sebagai tempat bermain anak-anak. Mahasiswa KKN juga
+              memanfaatkan area ini untuk beberapa kegiatan edukasi dan
+              permainan bersama anak.
+            </p>
+          </div>
+        </article>
+
+        <!-- Tempat Ibadah -->
+        <article
+          class="fasilitas-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col"
+          data-kategori="ibadah"
+        >
+          <img
+            src="img/Masjid.png"
+            alt="Masjid / mushola di perumahan"
+            class="h-40 w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-2 flex-1 text-sm">
+            <h2 class="font-semibold text-slate-900 text-sm">Tempat Ibadah</h2>
+            <p class="text-slate-600 text-xs">
+              Fasilitas tempat ibadah yang menjadi pusat kegiatan keagamaan
+              warga. Beberapa program KKN seperti pengajian anak dan kegiatan
+              keagamaan lain juga berkoordinasi dengan pengurus tempat ibadah
+              ini.
+            </p>
+          </div>
+        </article>
+
+        <!-- Pos Keamanan / Gerbang -->
+        <article
+          class="fasilitas-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col"
+          data-kategori="keamanan"
+        >
+          <img
+            src="img/satpam.png"
+            alt="Pos keamanan perumahan"
+            class="h-40 w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-2 flex-1 text-sm">
+            <h2 class="font-semibold text-slate-900 text-sm">
+              Pos Keamanan & Gerbang Utama
+            </h2>
+            <p class="text-slate-600 text-xs">
+              Sistem keamanan dengan pos jaga dan gerbang utama membantu menjaga
+              kondisi lingkungan tetap tertib dan aman. Mahasiswa KKN juga
+              berkoordinasi dengan petugas keamanan terkait pelaksanaan kegiatan
+              di area umum.
+            </p>
+          </div>
+        </article>
+
+        <!-- Balai Warga / Aula -->
+        <article
+          class="fasilitas-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col"
+          data-kategori="umum kkn"
+        >
+          <img
+            src="img/balaidesa.jpeg"
+            alt="Balai warga atau aula pertemuan"
+            class="h-40 w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-2 flex-1 text-sm">
+            <h2 class="font-semibold text-slate-900 text-sm">
+              Balai Warga / Aula Pertemuan
+            </h2>
+            <p class="text-slate-600 text-xs">
+              Ruang pertemuan yang digunakan untuk rapat RT/RW, sosialisasi, dan
+              kegiatan bersama. Banyak program kerja KKN seperti penyuluhan,
+              pelatihan, dan kegiatan edukasi yang dilaksanakan di fasilitas
+              ini.
+            </p>
+          </div>
+        </article>
+
+        <!-- Lapangan / Area Olahraga -->
+        <article
+          class="fasilitas-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col"
+          data-kategori="umum kkn"
+        >
+          <img
+            src="img/Lapangan.jpeg"
+            alt="Lapangan serbaguna"
+            class="h-40 w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-2 flex-1 text-sm">
+            <h2 class="font-semibold text-slate-900 text-sm">
+              Lapangan / Area Olahraga
+            </h2>
+            <p class="text-slate-600 text-xs">
+              Lapangan atau area olahraga yang dipakai warga untuk kegiatan
+              olahraga dan permainan. Kegiatan KKN seperti senam bersama dan
+              lomba permainan tradisional juga dapat dilaksanakan di sini.
+            </p>
+          </div>
+        </article>
+
+        <!-- Area Pendukung KKN (mis: posko / rumah singgah KKN) -->
+        <article
+          class="fasilitas-card bg-white rounded-2xl shadow-sm border border-slate-100 overflow-hidden flex flex-col"
+          data-kategori="kkn"
+        >
+          <img
+            src="img/BCKKN.jpg"
+            alt="Posko / basecamp KKN"
+            class="h-40 w-full object-cover"
+          />
+          <div class="p-5 flex flex-col gap-2 flex-1 text-sm">
+            <h2 class="font-semibold text-slate-900 text-sm">
+              Posko / Basecamp KKN
+            </h2>
+            <p class="text-slate-600 text-xs">
+              Tempat yang digunakan mahasiswa KKN untuk koordinasi internal,
+              menyimpan perlengkapan, dan mempersiapkan kegiatan pengabdian
+              masyarakat di Perumahan Taman Kebayoran.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500"
+      >
+        <p>&copy; <span id="year"></span> Perumahan Taman Kebayoran.</p>
+        <p>
+          Pengembang:
+          <span class="font-medium text-slate-700">Tim KKN 5</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="Tambahan/tambahan.js"></script>
+  </body>
+</html>

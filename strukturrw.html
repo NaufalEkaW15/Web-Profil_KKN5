@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur RW / DKM Nurul Ikhwan</title>
+    <meta
+      name="description"
+      content="Susunan pengurus DKM Nurul Ikhwan periode 2024-2027."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/Logo KKN.png" type="image/png" />
+    <link rel="stylesheet" href="Tambahan/style.css" />
+  </head>
+  <body class="bg-slate-100 text-slate-800">
+    <!-- NAVBAR (disamakan dengan halaman lain) -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/Logo KKN.png"
+            alt="Logo KKN 5 Ubhara Jaya"
+            class="h-8 w-8 object-contain"
+          />
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-slate-900 tracking-wide text-sm"
+              >Taman Kebayoran</span
+            >
+            <span class="text-[10px] text-slate-500"
+              >Website KKN 5 Ubhara Jaya</span
+            >
+          </div>
+        </a>
+
+       <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a>
+          <a href="Program.html" class="hover:text-emerald-600">Program</a>
+
+          <!-- DROPDOWN: STRUKTUR -->
+          <div class="relative" id="menu-struktur-wrapper">
+            <button
+              id="menu-struktur-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 text-emerald-600 focus:outline-none"
+            >
+              <span>Struktur</span>
+              <svg
+                id="menu-struktur-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown list struktur -->
+            <div
+              id="menu-struktur-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="struktur.html#inti"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur Kelompok KKN
+              </a>
+              <a
+                href="index.html#pengurus-rw"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur RW
+              </a>
+              <a
+                href="strukturrw.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800"
+              >
+                Struktur DKM Masjid
+              </a>
+            </div>
+          </div>
+          <a href="kegiatan-kkn.html" class="hover:text-emerald-600"
+            >Dokumentasi</a
+          >
+          <a href="kontak.html" class="hover:text-emerald-600">Kontak</a>
+        </div>
+
+        <!-- Mobile button -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none"
+        >
+          <span class="sr-only">Open main menu</span>
+          <div class="space-y-1">
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+          </div>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-100 bg-white"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1 text-sm">
+          <a href="index.html" class="block py-2 hover:text-emerald-600"
+            >Beranda</a
+          >
+          <a href="Program.html" class="block py-2 hover:text-emerald-600"
+            >Program</a
+          >
+          <a href="strukturrw.html" class="block py-2 text-emerald-600"
+            >Struktur</a
+          >
+          <a href="kegiatan-kkn.html" class="block py-2 hover:text-emerald-600"
+            >Dokumentasi</a
+          >
+          <a href="kontak.html" class="block py-2 hover:text-emerald-600"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- HERO / BREADCRUMB -->
+    <section class="bg-gradient-to-b from-emerald-50 to-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <p class="text-xs text-slate-500 mb-2">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a> /
+          <span class="text-slate-700">Struktur DKM Masjid</span>
+        </p>
+    <!-- KONTEN: GAMBAR STRUKTUR -->
+    <main class="min-h-screen flex items-start justify-center py-8">
+      <div class="max-w-5xl w-full px-4">
+        <h1 class="text-center text-xl sm:text-2xl font-semibold mb-6">
+          Susunan Pengurus DKM
+        </h1>
+        <div
+          class="bg-white rounded-2xl shadow-md border border-slate-200 overflow-hidden"
+        >
+          <!-- GANTI src DI BAWAH DENGAN NAMA FILE GAMBAR KAMU -->
+          <img
+            src="img/Struktur Organisasi (2024-2027)_copy_pages-to-jpg-0001.jpg"
+            alt="Susunan Pengurus DKM Nurul Ikhwan Periode 2024 - 2027"
+            class="w-full h-auto block"
+          />
+        </div>
+      </div>
+    </main>
+    </section>
+
+    <!-- FOOTER (opsional, kalau mau sama seperti halaman lain) -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500"
+      >
+        <p>&copy; <span id="year"></span> Perumahan Taman Kebayoran.</p>
+        <p>
+          Pengembang:
+          <span class="font-medium text-slate-700">Tim KKN 5</span>
+        </p>
+      </div>
+    </footer>
+
+    <script src="Tambahan/tambahan.js"></script>
+  </body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Program KKN Kelompok 5 - Taman Kebayoran</title>
+    <meta
+      name="description"
+      content="Rangkaian program KKN Kelompok 5 di Perumahan Taman Kebayoran."
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" href="img/Logo KKN.png" type="image/png" />
+    <link rel="stylesheet" href="Tambahan/style.css" />
+  </head>
+  <body class="bg-slate-900 text-slate-800">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/Logo KKN.png"
+            alt="Logo KKN 5 Ubhara Jaya"
+            class="h-8 w-8 object-contain"
+          />
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-slate-900 tracking-wide text-sm"
+              >Taman Kebayoran</span
+            >
+            <span class="text-[10px] text-slate-500"
+              >Website KKN 5 Ubhara Jaya</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a>
+          <a href="Program.html" class="text-emerald-600">Program</a>
+
+          <!-- DROPDOWN: STRUKTUR -->
+          <div class="relative" id="menu-struktur-wrapper">
+            <button
+              id="menu-struktur-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Struktur</span>
+              <svg
+                id="menu-struktur-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown list struktur -->
+            <div
+              id="menu-struktur-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="struktur.html#inti"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur Kelompok KKN
+              </a>
+              <a
+                href="index.html#pengurus-rw"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur RW
+              </a>
+              <a
+                href="strukturrw.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800"
+              >
+                Struktur DKM Masjid
+              </a>
+            </div>
+          </div>
+          <!-- DROPDOWN: dokumentasi -->
+          <div class="relative" id="menu-dokumentasi-wrapper">
+            <button
+              id="menu-dokumentasi-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Dokumentasi</span>
+              <svg
+                id="menu-dokumentasi-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list dokumentasi -->
+            <div
+              id="menu-dokumentasi-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="dkkkn.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi KKN
+              </a>
+              <a
+                href="dwarga.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi Warga
+              </a>
+            </div>
+          </div>
+          <a href="kontak.html" class="hover:text-emerald-600">Kontak</a>
+        </div>
+        <!-- Mobile menu -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none"
+        >
+          <span class="sr-only">Open main menu</span>
+          <div class="space-y-1">
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+          </div>
+        </button>
+      </nav>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-100 bg-white"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1 text-sm">
+          <a href="index.html" class="block py-2 hover:text-emerald-600"
+            >Beranda</a
+          >
+          <a href="Program.html" class="block py-2 hover:text-emerald-600"
+            >Program</a
+          >
+          <a href="struktur.html" class="block py-2 hover:text-emerald-600"
+            >Struktur</a
+          >
+          <a href="kegiatan-kkn.html" class="block py-2 hover:text-emerald-600"
+            >Dokumentasi</a
+          >
+          <a href="kontak.html" class="block py-2 hover:text-emerald-600"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+    <!-- POPUP IZIN MUSIK & AUDIO -->
+    <audio id="bg-music" loop>
+      <source src="img/Himawari.weba" type="audio/mpeg" />
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
+    <div
+      id="music-permission"
+      class="fixed inset-0 z-40 flex items-center justify-center bg-black/50"
+      style="display: none"
+    >
+      <div
+        class="bg-white max-w-sm w-full mx-4 rounded-2xl shadow-xl p-6 text-slate-800"
+      >
+        <h2 class="text-base sm:text-lg font-semibold mb-2">
+          Izinkan memutar musik di latar belakang?
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mb-4">
+          Musik tema Program KKN akan diputar selama Anda membuka halaman ini.
+          Anda bisa menghentikannya kapan saja.
+        </p>
+        <div class="flex justify-end gap-3 text-sm">
+          <button
+            id="music-deny"
+            class="px-4 py-2 rounded-full border border-slate-300 text-slate-600 hover:bg-slate-100"
+          >
+            Tidak
+          </button>
+          <button
+            id="music-allow"
+            class="px-4 py-2 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700"
+          >
+            Iya, putar musik
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- HERO + BREADCRUMB + JUDUL PROGRAM (DISATUKAN) -->
+    <section class="bg-gradient-to-b from-emerald-50 to-emerald-200">
+      <!-- Breadcrumb -->
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-4">
+        <p class="text-xs text-slate-500">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a> /
+          <span class="text-slate-700">Program KKN</span>
+        </p>
+      </div>
+      <br />
+      <!-- Blok hijau yang menyatu dengan background bawah -->
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <div
+          class="bg-emerald-900 rounded-3xl sm:rounded-[32px] shadow-xl -mt-2 sm:-mt-4"
+        >
+          <!-- Judul -->
+          <div class="px-4 sm:px-8 pt-6 pb-4">
+            <p
+              class="bg-emerald-700 text-[#Ffd33a] text-2xl sm:text-3xl lg:text-4xl font-bold px-4 sm:px-8 py-3 text-center rounded-2xl shadow-md"
+            >
+              Berikut proker KKN dari Kelompok 5
+            </p>
+          </div>
+          <!-- Poster + ucapan terima kasih -->
+          <div class="pb-8">
+            <div class="mt-4 flex justify-center">
+              <div class="max-w-4xl px-4 w-full">
+                <div
+                  class="overflow-hidden rounded-3xl shadow-2xl border border-emerald-700 bg-white"
+                >
+                  <img
+                    src="img/kerja bakti.png"
+                    alt="Poster Program KKN Kelompok 5"
+                    class="w-full h-auto block"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="mt-8 flex justify-center px-4 pb-6">
+              <p
+                class="text-center text-[#FFF7E3] text-lg sm:text-xl font-semibold animate-bounce bg-emerald-800/80 px-6 py-3 rounded-full shadow-lg"
+              >
+                Terima kasih kepada seluruh warga Perumahan Taman Kebayoran yang
+                telah berpartisipasi dalam Program KKN Kelompok 5.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500"
+      >
+        <p>&copy; <span id="year"></span> Perumahan Taman Kebayoran.</p>
+        <p>
+          Pengembang:
+          <span class="font-medium text-slate-700">Tim KKN 5</span>
+        </p>
+      </div>
+    </footer>
+    <script src="Tambahan/tambahan.js"></script>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Struktur Kelompok KKN</title>
+    <meta
+      name="description"
+      content="Struktur dan susunan anggota kelompok KKN yang melaksanakan kegiatan di Perumahan Taman Kebayoran."
+    />
+    <link rel="icon" href="img/Logo KKN.png" type="image/png" />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Tambahan/style.css" />
+  </head>
+  <body class="bg-slate-50 text-slate-800">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/Logo KKN.png"
+            alt="Logo Perumahan Taman Kebayoran"
+            class="h-8 w-8 object-contain"
+          />
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-slate-900 tracking-wide text-sm"
+              >Taman Kebayoran</span
+            >
+            <span class="text-[10px] text-slate-500"
+              >Website KKN 5 Ubhara Jaya</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a>
+          <a href="Program.html" class="hover:text-emerald-600">Program</a>
+
+          <!-- DROPDOWN: STRUKTUR -->
+          <div class="relative" id="menu-struktur-wrapper">
+            <button
+              id="menu-struktur-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 text-emerald-600 focus:outline-none"
+            >
+              <span>Struktur</span>
+              <svg
+                id="menu-struktur-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+
+            <!-- Dropdown list struktur -->
+            <div
+              id="menu-struktur-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="struktur.html#inti"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur Kelompok KKN
+              </a>
+              <a
+                href="index.html#pengurus-rw"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur RW
+              </a>
+              <a
+                href="strukturrw.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800"
+              >
+                Struktur DKM Masjid
+              </a>
+            </div>
+          </div>
+          <!-- DROPDOWN: dokumentasi -->
+          <div class="relative" id="menu-dokumentasi-wrapper">
+            <button
+              id="menu-dokumentasi-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Dokumentasi</span>
+              <svg
+                id="menu-dokumentasi-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list dokumentasi -->
+            <div
+              id="menu-dokumentasi-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="dkkkn.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi KKN
+              </a>
+              <a
+                href="dwarga.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi Warga
+              </a>
+            </div>
+          </div>
+          <a href="kontak.html" class="hover:text-emerald-600">Kontak</a>
+        </div>
+
+        <!-- Mobile button -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none"
+        >
+          <span class="sr-only">Open main menu</span>
+          <div class="space-y-1">
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+          </div>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-100 bg-white"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1 text-sm">
+          <a href="index.html" class="block py-2 hover:text-emerald-600"
+            >Beranda</a
+          >
+          <a href="Program.html" class="block py-2 hover:text-emerald-600"
+            >Program</a
+          >
+          <a href="struktur-kkn.html" class="block py-2 text-emerald-600"
+            >Struktur KKN</a
+          >
+          <a href="kegiatan-kkn.html" class="block py-2 hover:text-emerald-600"
+            >Kegiatan KKN</a
+          >
+          <a href="kontak.html" class="block py-2 hover:text-emerald-600"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO / BREADCRUMB -->
+    <section class="bg-gradient-to-b from-emerald-50 to-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+        <p class="text-xs text-slate-500 mb-2">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a> /
+          <span class="text-slate-700">Struktur Kelompok KKN</span>
+        </p>
+      </div>
+    </section>
+    <!-- STRUKTUR KKN -->
+    <section class="py-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-lg font-semibold text-slate-900 mb-6 text-center">
+          Struktur Kelompok KKN
+        </h2>
+        <!-- Grid 3x3, posisi benar‑benar di tengah -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center"
+        >
+          <!-- CARD 1: Ubhara -->
+          <a
+            href="https://bit.ly/48uQUVy"
+            target="_blank"
+            class="kkn-poster-card kkn-poster-dpl"
+          >
+            <div class="kkn-poster-dpl-inner">
+              <div class="kkn-poster-dpl-avatar">
+                <img src="img/struktur/LOGO-UBHARA-NEW-compress.jpg" />
+              </div>
+              <p class="kkn-poster-dpl-role">
+                Universitas Bhayangkara Jakarta Raya
+              </p>
+            </div>
+          </a>
+          <!-- CARD 2: DPL -->
+          <a
+            href="https://bit.ly/3KlSsrO"
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/ibu-herla.png"
+              alt="DPL - Ibu Herlawati"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 3: KKN -->
+          <a
+            href="https://bit.ly/4q1aFtF"
+            target="_blank"
+            class="kkn-poster-card kkn-poster-dpl"
+          >
+            <div class="kkn-poster-dpl-inner">
+              <div class="kkn-poster-dpl-avatar">
+                <img src="img/Logo KKN.png" />
+              </div>
+              <p class="kkn-poster-dpl-role">KKN Kelompok 5</p>
+            </div>
+          </a>
+          <!-- CARD 4: Ketua -->
+          <a
+            href="https://www.instagram.com/p/DRkTSQYD38y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/rafly.png"
+              alt="Ketua Kelompok KKN"
+              class="kkn-poster-img"
+            />
+          </a>
+
+          <!-- CARD 5: Sekretaris -->
+          <a
+            href="https://www.instagram.com/p/DRkTIl_j4Bw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/renaldy.png"
+              alt="Sekretaris"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 6: Sekretaris2 -->
+          <a
+            href="https://www.instagram.com/p/DRkTIl_j4Bw/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/nurcholis.png"
+              alt="Sekretaris2"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 7: Bendahara -->
+          <a
+            href="https://www.instagram.com/p/DRkSxZwj4Jd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/MIRZA.png"
+              alt="Bendahara"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: Logistik -->
+          <a
+            href="https://www.instagram.com/p/DRkSQI0Dy10/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/naufal.png"
+              alt="Logistik"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: Logistik2 -->
+          <a
+            href="https://www.instagram.com/p/DRkSQI0Dy10/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/nauval.png"
+              alt="Logistik2"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: PDD -->
+          <a
+            href="https://www.instagram.com/p/DRkSCqyjyeN/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/caroline.png"
+              alt="PDD"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: PDD2 -->
+          <a
+            href="https://www.instagram.com/p/DRkSQI0Dy10/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/gymnastiar.png"
+              alt="PDD2"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: Acara -->
+          <a
+            href="https://www.instagram.com/p/DRkRDE1D8PL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/raka.png"
+              alt="Acara"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: Konsumsi -->
+          <a
+            href="https://www.instagram.com/p/DRkRyduD6ho/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/pahrizal.png"
+              alt="Konsumsi"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: logo RW -->
+          <a href="." target="_blank" class="kkn-poster-card">
+            <img
+              src="img/struktur/Logo rw.jpeg"
+              alt="Logo RW"
+              class="kkn-poster-img"
+            />
+          </a>
+          <!-- CARD 8: Konsumsi2 -->
+          <a
+            href="https://www.instagram.com/p/DRkRyduD6ho/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+            target="_blank"
+            class="kkn-poster-card"
+          >
+            <img
+              src="img/struktur/putra.png"
+              alt="Konsumsi2"
+              class="kkn-poster-img"
+            />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200 bg-white">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-500"
+      >
+        <p>&copy; <span id="year"></span> Perumahan Taman Kebayoran.</p>
+        <p>
+          Pengembang:
+          <span class="font-medium text-slate-700">Tim KKN 5</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="Tambahan/tambahan.js"></script>
+  </body>
+</html>

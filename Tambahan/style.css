@@ -1,0 +1,225 @@
+/* Style tambahan kecil-kecil di luar Tailwind */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+/* Utility untuk sr-only (screen reader only, kalau ingin dipakai) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Animasi fade-in saat discroll ---------- */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(16px);
+}
+
+/* ---------- Animasi zoom halus pada gambar kiri ---------- */
+.hero-image-zoom {
+  transition: transform 6s ease-out, filter 0.6s ease-out;
+  filter: brightness(0.8);
+}
+
+.hero-image-zoom:hover {
+  transform: scale(1.08);
+  filter: brightness(1);
+}
+
+/* ==== PARALLAX HERO SEDERHANA ==== */
+.parallax-hero {
+  background-attachment: fixed;
+}
+
+/* ==== KARTU FOTO: TILT + GLOW ==== */
+.card-tilt {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-tilt:hover {
+  transform: translateY(-6px) rotate3d(1, 1, 0, 4deg);
+  box-shadow: 0 20px 30px rgba(15, 23, 42, 0.6);
+}
+
+.card-tilt::before {
+  content: "";
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  background: radial-gradient(circle at top left, #22c55e55, transparent 60%),
+    radial-gradient(circle at bottom right, #0ea5e955, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.card-tilt:hover::before {
+  opacity: 1;
+}
+
+/* ==== BADGE LEMBUT ==== */
+.badge-soft {
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.badge-soft:hover {
+  transform: translateY(-1px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(15, 23, 42, 0.5);
+}
+
+/* ==== UNDERLINE SLIDE-IN PADA TITLE SECTION ==== */
+.section-title {
+  position: relative;
+  display: inline-flex;
+}
+
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 2px;
+  width: 40%;
+  background: linear-gradient(to right, #22c55e, transparent);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s ease-out;
+}
+
+/* Saat section muncul (via JS is-visible), aktifkan underline */
+.fade-in-on-scroll.is-visible .section-title::after {
+  transform: scaleX(1);
+}
+
+/* ==== PULSE UNTUK BLOK COMING SOON ==== */
+.coming-soon-pulse {
+  animation: comingSoonPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes comingSoonPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(148, 163, 184, 0.45);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(148, 163, 184, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(148, 163, 184, 0);
+  }
+}
+
+/* ==== OPSIONAL: SCROLL HALUS GLOBAL (sudah ada di beberapa filemu) ==== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Kartu fasilitas: animasi hover sederhana */
+.fasilitas-card {
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.fasilitas-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+/* Tombol filter fasilitas (kelas ditambah/dihapus oleh JS) */
+.fasilitas-filter-btn.active {
+  background-color: rgb(16 185 129); /* emerald-500 */
+  color: #ffffff;
+  border-color: rgb(16 185 129);
+}
+
+/* Card poster KKN, rasio mengikuti gambar yang kamu kirim */
+.kkn-poster-card {
+  display: block;
+  width: 260px; /* ubah 240–300px sesuai selera */
+  aspect-ratio: 591 / 1004; /* rasio asli poster (lebar / tinggi) */
+  border-radius: 12px; /* opsional */
+  overflow: hidden;
+  border: 2px solid #000;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.35);
+  background: #000;
+  cursor: pointer;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.kkn-poster-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.6);
+}
+
+.kkn-poster-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Card khusus DPL: isi diatur ulang, foto bulat di tengah */
+.kkn-poster-dpl {
+  background: linear-gradient(135deg, #16a34a, #14532d); /* hijau gradasi */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kkn-poster-dpl-inner {
+  text-align: center;
+  color: #f9fafb;
+  padding: 16px;
+}
+
+/* Lingkaran foto */
+.kkn-poster-dpl-avatar {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 12px;
+  border-radius: 9999px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.4);
+}
+
+.kkn-poster-dpl-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Teks di bawah foto */
+.kkn-poster-dpl-role {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #fef9c3;
+  margin-bottom: 4px;
+}
+
+.kkn-poster-dpl-name {
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.3;
+}

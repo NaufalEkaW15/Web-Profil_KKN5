@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dokumentasi Kegiatan KKN - Taman Kebayoran</title>
+    <meta
+      name="description"
+      content="Dokumentasi lengkap kegiatan KKN Kelompok 5 di Perumahan Taman Kebayoran."
+    />
+    <link rel="icon" href="img/Logo KKN.png" type="image/png" />
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="Tambahan/style.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100">
+    <!-- NAVBAR -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+      <nav
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <a href="index.html" class="flex items-center gap-2">
+          <img
+            src="img/Logo KKN.png"
+            alt="Logo KKN 5 Ubhara Jaya"
+            class="h-8 w-8 object-contain"
+          />
+          <div class="flex flex-col leading-tight">
+            <span class="font-semibold text-slate-900 tracking-wide text-sm"
+              >Taman Kebayoran</span
+            >
+            <span class="text-[10px] text-slate-500"
+              >Website KKN 5 Ubhara Jaya</span
+            >
+          </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a>
+          <a href="Program.html" class="hover:text-emerald-600">Program</a>
+
+          <!-- DROPDOWN: STRUKTUR -->
+          <div class="relative" id="menu-struktur-wrapper">
+            <button
+              id="menu-struktur-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Struktur</span>
+              <svg
+                id="menu-struktur-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list struktur -->
+            <div
+              id="menu-struktur-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="struktur.html#inti"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur Kelompok KKN
+              </a>
+              <a
+                href="#pengurus-rw"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Struktur RW
+              </a>
+              <a
+                href="strukturrw.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800"
+              >
+                Struktur DKM Masjid
+              </a>
+            </div>
+          </div>
+          <!-- DROPDOWN: dokumentasi -->
+          <div class="relative" id="menu-dokumentasi-wrapper">
+            <button
+              id="menu-dokumentasi-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 text-emerald-600 focus:outline-none"
+            >
+              <span>Dokumentasi</span>
+              <svg
+                id="menu-dokumentasi-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list dokumentasi -->
+            <div
+              id="menu-dokumentasi-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="dkkkn.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi KKN
+              </a>
+              <a
+                href="dwarga.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi Warga
+              </a>
+            </div>
+          </div>
+          <a href="kontak.html" class="hover:text-emerald-600">Kontak</a>
+        </div>
+
+        <!-- Mobile button -->
+        <button
+          id="mobile-menu-toggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-slate-600 hover:bg-slate-100 focus:outline-none"
+        >
+          <span class="sr-only">Open main menu</span>
+          <div class="space-y-1">
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+            <span class="block w-6 h-0.5 bg-slate-700"></span>
+          </div>
+        </button>
+      </nav>
+
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden border-t border-slate-100 bg-white"
+      >
+        <div class="px-4 pt-2 pb-3 space-y-1 text-sm">
+          <a href="index.html" class="block py-2 hover:text-emerald-600"
+            >Beranda</a
+          >
+          <a href="Program.html" class="block py-2 hover:text-emerald-600"
+            >Program</a
+          >
+          <a href="struktur.html" class="block py-2 hover:text-emerald-600"
+            >Struktur</a
+          >
+          <a href="dkkkn.html" class="block py-2 text-emerald-600"
+            >Dokumentasi</a
+          >
+          <a href="kontak.html" class="block py-2 hover:text-emerald-600"
+            >Kontak</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- POPUP IZIN MUSIK & AUDIO -->
+    <audio id="bg-music" loop>
+      <source
+        src="img/PnB Rock - Unforgettable (Freestyle).mp3"
+        type="audio/mpeg"
+      />
+      Browser Anda tidak mendukung pemutar audio.
+    </audio>
+    <div
+      id="music-permission"
+      class="fixed inset-0 z-40 flex items-center justify-center bg-black/50"
+      style="display: none"
+    >
+      <div
+        class="bg-white max-w-sm w-full mx-4 rounded-2xl shadow-xl p-6 text-slate-800"
+      >
+        <h2 class="text-base sm:text-lg font-semibold mb-2">
+          Izinkan memutar musik di latar belakang?
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 mb-4">
+          Musik tema Program KKN akan diputar selama Anda membuka halaman ini.
+          Anda bisa menghentikannya kapan saja.
+        </p>
+        <div class="flex justify-end gap-3 text-sm">
+          <button
+            id="music-deny"
+            class="px-4 py-2 rounded-full border border-slate-300 text-slate-600 hover:bg-slate-100"
+          >
+            Tidak
+          </button>
+          <button
+            id="music-allow"
+            class="px-4 py-2 rounded-full bg-emerald-600 text-white font-semibold hover:bg-emerald-700"
+          >
+            Iya, putar musik
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO / BREADCRUMB DENGAN PARALLAX RINGAN -->
+    <section
+      class="bg-gradient-to-b from-emerald-50/90 to-emerald-700 parallax-hero"
+    >
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+        <p class="text-xs text-slate-600 mb-2">
+          <a href="index.html" class="hover:text-emerald-600">Beranda</a> /
+          <span class="text-slate-800">Dokumentasi KKN</span>
+        </p>
+        <h1
+          class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-slate-900 mb-3"
+        >
+          Dokumentasi Kegiatan KKN Kelompok 5
+        </h1>
+      </div>
+    </section>
+    <!-- KONTEN DOKUMENTASI -->
+    <main class="-mt-10 pb-12">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 bg-slate-950/95 rounded-3xl shadow-2xl border border-emerald-700/70 pt-8 pb-10"
+      >
+        <!-- 1. Pembukaan resmi di aula desa -->
+        <section class="mb-10 fade-in-on-scroll">
+          <header
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4"
+          >
+            <div>
+              <p
+                class="text-[11px] uppercase tracking-[0.2em] text-emerald-400"
+              >
+                01
+              </p>
+              <h2
+                class="section-title text-lg sm:text-xl font-semibold text-white flex items-center gap-2"
+              >
+                Pembukaan Resmi di Aula Desa
+                <span
+                  class="badge-soft inline-flex items-center rounded-full bg-emerald-500/20 text-emerald-300 text-[10px] px-2 py-0.5"
+                  >Opening</span
+                >
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md">
+              Seremoni pembukaan resmi KKN bersama perangkat desa dan tokoh
+              masyarakat sebagai tanda dimulainya rangkaian program.
+            </p>
+          </header>
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <!-- Ganti src sesuai foto -->
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/PK_Sekertaris.JPG"
+                alt="Pembukaan resmi KKN di aula desa"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Sambutan dari Bapak Jahidin M.Kom.I selaku sekertaris desa
+                Setiamekar
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/Fotobersama.jpg"
+                alt="Suasana peserta KKN dan warga di aula desa"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Foto bersama mahasiswa KKN, perangkat desa, dan warga yang
+                hadir.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800 sm:col-span-2 lg:col-span-1"
+            >
+              <img
+                src="img/dokumentasi/PK_BuHerla.JPG"
+                alt="Prosesi pembukaan resmi KKN di aula desa"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Sambutan dari Bu Dr.herlawati.S.SI.,M.M.,M.Kom selaku DPL KKN
+                kelompok 5.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 2. Sosialisasi berita hoax & pembukaan KKN di tempat KKN -->
+        <section class="mb-10 fade-in-on-scroll">
+          <header
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4"
+          >
+            <div>
+              <p
+                class="text-[11px] uppercase tracking-[0.2em] text-emerald-400"
+              >
+                02
+              </p>
+              <h2
+                class="section-title text-lg sm:text-xl font-semibold text-white flex flex-wrap items-center gap-2"
+              >
+                Sosialisasi Berita Hoax & Pembukaan KKN di Lokasi
+                <span
+                  class="badge-soft inline-flex items-center rounded-full bg-sky-500/20 text-sky-300 text-[10px] px-2 py-0.5"
+                  >Edukasi</span
+                >
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md">
+              Kegiatan penyuluhan mengenai berita hoax sekaligus perkenalan
+              langsung mahasiswa KKN kepada warga di lokasi program.
+            </p>
+          </header>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/BuHerla_1.jpg"
+                alt="Pemateri menjelaskan tentang berita hoax"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Sambutan dari Bu Dr.herlawati.S.SI.,M.M.,M.Kom selaku DPL KKN di
+                lingkungan perumahan.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/Ketua_1.jpg"
+                alt="Interaksi warga dalam sesi tanya jawab"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Penyampaian materi mengenai cara mengenali dan memfilter berita
+                hoax oleh ketua kelompok 5..
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800 sm:col-span-2 lg:col-span-1"
+            >
+              <img
+                src="img/dokumentasi/TanyaJawab_1.png"
+                alt="Pembukaan KKN di lokasi perumahan"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Sesi tanya jawab interaktif antara warga dan kelompok KKN.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 3. Kerja bakti -->
+        <section class="mb-10 fade-in-on-scroll">
+          <header
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4"
+          >
+            <div>
+              <p
+                class="text-[11px] uppercase tracking-[0.2em] text-emerald-400"
+              >
+                03
+              </p>
+              <h2
+                class="section-title text-lg sm:text-xl font-semibold text-white flex items-center gap-2"
+              >
+                Kerja Bakti
+                <span
+                  class="badge-soft inline-flex items-center rounded-full bg-lime-500/20 text-lime-300 text-[10px] px-2 py-0.5"
+                  >Gotong Royong</span
+                >
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md">
+              Pembersihan lingkungan bersama warga untuk menciptakan kawasan
+              perumahan yang lebih bersih dan sehat.
+            </p>
+          </header>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/KB2.jpg"
+                alt="Mahasiswa dan warga membersihkan lingkungan"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Kerja bakti membersihkan lingkungan masjid.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/MakanB2.jpg"
+                alt="Pembersihan selokan dan area sekitar rumah"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Sesi makan-makan bersama warga setelah kerja bakti.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800 sm:col-span-2 lg:col-span-1"
+            >
+              <img
+                src="img/dokumentasi/FB2.JPG"
+                alt="Foto bersama setelah kerja bakti"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Dokumentasi foto bersama DKM dan Sekertaris DKM setelah kegiatan
+                kerja bakti selesai.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 4. Coding games anak kecil -->
+        <section class="mb-10 fade-in-on-scroll">
+          <header
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4"
+          >
+            <div>
+              <p
+                class="text-[11px] uppercase tracking-[0.2em] text-emerald-400"
+              >
+                04
+              </p>
+              <h2
+                class="section-title text-lg sm:text-xl font-semibold text-white flex items-center gap-2"
+              >
+                Coding Games untuk Anak-Anak
+                <span
+                  class="badge-soft inline-flex items-center rounded-full bg-fuchsia-500/20 text-fuchsia-300 text-[10px] px-2 py-0.5"
+                  >Fun Learning</span
+                >
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md">
+              Pengenalan logika pemrograman melalui permainan interaktif yang
+              menyenangkan untuk anak-anak.
+            </p>
+          </header>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/MC2.jpg"
+                alt="Anak-anak mengikuti kegiatan coding games"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Anak-anak memperhatikan penjelasan dari MC acara.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/PL2.jpg"
+                alt="Praktik langsung coding games di laptop"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Praktik langsung menggunakan laptop yang telah disediakan.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800 sm:col-span-2 lg:col-span-1"
+            >
+              <img
+                src="img/dokumentasi/HC2.jpg"
+                alt="Suasana kelas coding games yang interaktif"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Pembagian hadiah juara untuk peserta.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 5. Sosialisasi web IASC OJK -->
+        <section class="mb-10 fade-in-on-scroll">
+          <header
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3 mb-4"
+          >
+            <div>
+              <p
+                class="text-[11px] uppercase tracking-[0.2em] text-emerald-400"
+              >
+                05
+              </p>
+              <h2
+                class="section-title text-lg sm:text-xl font-semibold text-white flex items-center gap-2"
+              >
+                Sosialisasi Web IASC OJK
+                <span
+                  class="badge-soft inline-flex items-center rounded-full bg-amber-500/20 text-amber-300 text-[10px] px-2 py-0.5"
+                  >Edukasi</span
+                >
+              </h2>
+            </div>
+            <p class="text-xs text-slate-400 max-w-md">
+              Edukasi kepada warga mengenai website IASC OJK sebagai sarana
+              pengecekan legalitas lembaga keuangan.
+            </p>
+          </header>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 text-xs">
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/PW3.jpg"
+                alt="Pemaparan materi mengenai web IASC OJK"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Penjelasan tentang peran OJK dan fungsi web IASC.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800"
+            >
+              <img
+                src="img/dokumentasi/DL3.JPG"
+                alt="Contoh penggunaan web IASC OJK di layar"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Demo langsung cara melapor tindakan hoax di web IASC OJK.
+              </figcaption>
+            </figure>
+
+            <figure
+              class="card-tilt group relative overflow-hidden rounded-2xl bg-slate-900/60 border border-slate-800 sm:col-span-2 lg:col-span-1"
+            >
+              <img
+                src="img/dokumentasi/TJ3.JPG"
+                alt="Interaksi warga saat sosialisasi web IASC OJK"
+                class="h-44 w-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <figcaption
+                class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 to-black/5 px-3 py-2 text-[11px] text-slate-100 font-medium italic tracking-wide"
+              >
+                Warga melakukan tanya jawab mengenai kredibilitas web IASC OJK .
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <!-- 6. Penutupan (Coming Soon) -->
+        <section class="mt-12 fade-in-on-scroll">
+          <header class="mb-4 text-center">
+            <p class="text-[11px] uppercase tracking-[0.3em] text-emerald-400">
+              06
+            </p>
+            <h2
+              class="section-title text-lg sm:text-xl font-semibold text-white flex items-center justify-center gap-2"
+            >
+              Penutupan Program KKN
+              <span
+                class="badge-soft inline-flex items-center rounded-full bg-slate-500/30 text-slate-200 text-[10px] px-2 py-0.5"
+                >Coming Soon</span
+              >
+            </h2>
+            <p class="text-xs text-slate-400 mt-1 max-w-md mx-auto">
+              Dokumentasi penutupan resmi KKN akan segera ditambahkan ke halaman
+              ini.
+            </p>
+          </header>
+          <div
+            class="coming-soon-pulse flex items-center justify-center rounded-3xl border border-dashed border-slate-600/70 bg-slate-900/60 py-10 px-4"
+          >
+            <p
+              class="text-center text-slate-300 text-sm sm:text-base font-semibold tracking-wide"
+            >
+              Coming soon — dokumentasi foto dan cerita penutupan KKN Kelompok 5
+              akan diunggah di sini.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-800 bg-slate-950">
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-400"
+      >
+        <p>&copy; <span id="year"></span> Perumahan Taman Kebayoran.</p>
+        <p>
+          Dokumentasi oleh
+          <span class="font-medium text-slate-200">Tim KKN 5</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Main JS -->
+    <script src="Tambahan/tambahan.js"></script>
+  </body>
+</html>
