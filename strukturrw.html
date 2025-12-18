@@ -89,9 +89,49 @@
               </a>
             </div>
           </div>
-          <a href="kegiatan-kkn.html" class="hover:text-emerald-600"
-            >Dokumentasi</a
-          >
+          <!-- DROPDOWN: dokumentasi -->
+          <div class="relative" id="menu-dokumentasi-wrapper">
+            <button
+              id="menu-dokumentasi-toggle"
+              type="button"
+              class="inline-flex items-center gap-1 hover:text-emerald-600 focus:outline-none"
+            >
+              <span>Dokumentasi</span>
+              <svg
+                id="menu-dokumentasi-chevron"
+                class="w-3.5 h-3.5 transition-transform duration-150"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 9l-7 7-7-7"
+                />
+              </svg>
+            </button>
+            <!-- Dropdown list dokumentasi -->
+            <div
+              id="menu-dokumentasi-dropdown"
+              class="absolute left-0 mt-2 w-64 bg-slate-900 text-white rounded-sm shadow-lg border border-slate-700 z-40 hidden"
+            >
+              <a
+                href="dkkkn.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi KKN
+              </a>
+              <a
+                href="dwarga.html"
+                class="block px-4 py-3 text-xs sm:text-sm hover:bg-slate-800 border-b border-slate-800"
+              >
+                Dokumentasi Warga
+              </a>
+            </div>
+          </div>
           <a href="kontak.html" class="hover:text-emerald-600">Kontak</a>
         </div>
 
